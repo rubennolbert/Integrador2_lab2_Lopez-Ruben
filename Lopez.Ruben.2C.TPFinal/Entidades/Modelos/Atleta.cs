@@ -68,7 +68,7 @@ namespace Entidades.Modelos
 
         public bool VerificacionPagoAlDia()
         {
-            string mesActual = DateTime.Now.ToString("MM");   ///ver
+            string mesActual = DateTime.Now.ToString("MM");   
             string anioActual = DateTime.Now.ToString("yyyy");
 
             foreach(Cuota cuota in this.historialDePagos)

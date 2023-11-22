@@ -92,7 +92,7 @@ namespace Formularios
             {
                 if (this.lstPersonas.SelectedIndex != -1)
                 {
-                    if (MessageBox.Show("Esta seguro que desea eliminar al socio?", "Eliminar socio", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == DialogResult.Yes)
+                    if (MessageBox.Show("Esta seguro que desea eliminar al atleta?", "Eliminar atleta", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == DialogResult.Yes)
                     {
                         atleta = (Atleta)this.lstPersonas.SelectedItem;
                         MessageBox.Show(this.Box.ElimiarAtleta(atleta), "Eliminar atleta", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -106,11 +106,11 @@ namespace Formularios
             }
             catch (ExceptionSQL ex)
             {
-                MessageBox.Show(ex.Message, "Error al eliminar el socio", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, "Error al eliminar el atleta", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Error al eliminar el socio", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, "Error al eliminar el atleta", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -141,16 +141,16 @@ namespace Formularios
             try
             {
                 GestorSQL.LeerDatosBoxCrossfit(this.Box);
-                this.serializar.Escribir("dataSocios.xml", this.Box.ListaAtletas);
-                MessageBox.Show($"Datos exportados con éxito.\nEl archivo dataSocios.xml se encuentra en: {this.serializar.RutaDeEscritura()}", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.serializar.Escribir("dataAtletas.xml", this.Box.ListaAtletas);
+                MessageBox.Show($"Datos exportados con éxito.\nEl archivo dataAtletas.xml se encuentra en: {this.serializar.RutaDeEscritura()}", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (ArchivoInvalidoException ex)
             {
-                MessageBox.Show(ex.Message, "Error al escribir el archivo de datos de socios", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, "Error al escribir el archivo de datos de atletas", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             catch (ExceptionSQL ex)
             {
-                MessageBox.Show(ex.Message, "Error al ingresar al club", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, "Error al ingresar al box", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -187,7 +187,7 @@ namespace Formularios
             }
             catch (ExceptionSQL ex)
             {
-                MessageBox.Show(ex.Message, "Error al ingresar al club", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, "Error al ingresar al box", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             catch (Exception ex)
             {

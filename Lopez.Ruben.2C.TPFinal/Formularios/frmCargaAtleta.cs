@@ -62,11 +62,11 @@ namespace Formularios
             }
             catch (IngresoAlClubException ex)
             {
-                MessageBox.Show(ex.Message, "Error al ingresar al club", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, "Error al ingresar al box", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             catch (ExceptionSQL ex)
             {
-                MessageBox.Show(ex.Message, "Error al ingresar al club", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, "Error al ingresar al box", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             catch (Exception ex)
             {
@@ -122,7 +122,7 @@ namespace Formularios
         {
             if (!(this.box != atleta && box + atleta))
             {
-                throw new IngresoAlClubException("No se pudo agregar el socio");
+                throw new IngresoAlClubException("No se pudo agregar el atleta");
             }
             return true;
         }
