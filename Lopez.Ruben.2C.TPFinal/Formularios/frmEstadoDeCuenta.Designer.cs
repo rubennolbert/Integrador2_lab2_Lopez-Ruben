@@ -131,7 +131,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(690, 409);
             Controls.Add(lstHistorialDePagos);
             Controls.Add(btnImprimir);
             Controls.Add(groupBox1);
@@ -141,7 +141,10 @@
             Controls.Add(txtDni);
             Controls.Add(txtApellido);
             Controls.Add(txtNombre);
+            MaximizeBox = false;
+            MinimizeBox = false;
             Name = "frmEstadoDeCuenta";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Estado de cuenta";
             Load += frmEstadoDeCuenta_Load;
             groupBox1.ResumeLayout(false);

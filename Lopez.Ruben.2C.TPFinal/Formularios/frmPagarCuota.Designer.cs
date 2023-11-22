@@ -184,7 +184,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(302, 450);
+            ClientSize = new Size(266, 453);
             Controls.Add(cmbMetodoDePago);
             Controls.Add(dtpFechaCuota);
             Controls.Add(label7);
@@ -201,7 +201,10 @@
             Controls.Add(txtDni);
             Controls.Add(txtApellido);
             Controls.Add(txtNombre);
+            MaximizeBox = false;
+            MinimizeBox = false;
             Name = "frmPagarCuota";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "frmPagarCuota";
             Load += frmPagarCuota_Load;
             ResumeLayout(false);

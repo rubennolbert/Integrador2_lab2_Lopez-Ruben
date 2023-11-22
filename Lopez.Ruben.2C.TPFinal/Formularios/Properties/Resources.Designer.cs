@@ -59,5 +59,27 @@ namespace Formularios.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Logotipo_de_fitness_y_crossfit_healty_care___Vector_Premium___Opera_22_11_2023_19_32_30 {
+            get {
+                object obj = ResourceManager.GetObject("Logotipo de fitness y crossfit healty care _ Vector Premium - Opera 22_11_2023 19" +
+                        "_32_30", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Logotipo_de_fitness_y_crossfit_healty_care___Vector_Premium___Opera_22_11_2023_19_36_56 {
+            get {
+                object obj = ResourceManager.GetObject("Logotipo de fitness y crossfit healty care _ Vector Premium - Opera 22_11_2023 19" +
+                        "_36_56", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

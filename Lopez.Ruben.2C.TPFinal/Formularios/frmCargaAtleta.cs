@@ -79,7 +79,7 @@ namespace Formularios
         {
             this.Close();
         }
-      
+
         private bool ValidarCampos()
         {
             if (this.txtNombre.Text == string.Empty || this.txtApellido.Text == string.Empty || this.txtDni.Text == string.Empty)
@@ -127,6 +127,6 @@ namespace Formularios
             return true;
         }
 
-        
+
     }
 }

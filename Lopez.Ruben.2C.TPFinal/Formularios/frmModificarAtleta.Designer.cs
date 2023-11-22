@@ -147,7 +147,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(462, 450);
+            ClientSize = new Size(282, 406);
             Controls.Add(btnCancelar);
             Controls.Add(btnAceptar);
             Controls.Add(cbmEnum1);
@@ -160,7 +160,10 @@
             Controls.Add(txtDni);
             Controls.Add(txtApellido);
             Controls.Add(txtNombre);
+            MaximizeBox = false;
+            MinimizeBox = false;
             Name = "frmModificarAtleta";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Modificar Atleta";
             Load += frmModificarAtleta_Load;
             ResumeLayout(false);

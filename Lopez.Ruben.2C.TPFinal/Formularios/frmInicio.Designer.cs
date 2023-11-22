@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmInicio));
-            pictureBox1 = new PictureBox();
             pictureBox2 = new PictureBox();
             btnCargar = new Button();
             btnModificar = new Button();
@@ -40,29 +39,21 @@
             btnLeerBaaseDeDatosSQL = new Button();
             lstPersonas = new ListBox();
             lblCargando = new Label();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
             // 
-            // pictureBox1
-            // 
-            pictureBox1.Location = new Point(12, 89);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(100, 122);
-            pictureBox1.TabIndex = 0;
-            pictureBox1.TabStop = false;
-            // 
             // pictureBox2
             // 
-            pictureBox2.Location = new Point(12, 230);
+            pictureBox2.Image = Properties.Resources.Logotipo_de_fitness_y_crossfit_healty_care___Vector_Premium___Opera_22_11_2023_19_36_56;
+            pictureBox2.Location = new Point(8, 9);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(100, 121);
+            pictureBox2.Size = new Size(111, 262);
             pictureBox2.TabIndex = 1;
             pictureBox2.TabStop = false;
             // 
             // btnCargar
             // 
-            btnCargar.Location = new Point(122, 89);
+            btnCargar.Location = new Point(125, 12);
             btnCargar.Name = "btnCargar";
             btnCargar.Size = new Size(231, 37);
             btnCargar.TabIndex = 2;
@@ -72,7 +63,7 @@
             // 
             // btnModificar
             // 
-            btnModificar.Location = new Point(122, 132);
+            btnModificar.Location = new Point(125, 55);
             btnModificar.Name = "btnModificar";
             btnModificar.Size = new Size(231, 36);
             btnModificar.TabIndex = 3;
@@ -82,7 +73,7 @@
             // 
             // btnExportar
             // 
-            btnExportar.Location = new Point(122, 275);
+            btnExportar.Location = new Point(125, 198);
             btnExportar.Name = "btnExportar";
             btnExportar.Size = new Size(231, 35);
             btnExportar.TabIndex = 4;
@@ -92,7 +83,7 @@
             // 
             // btnEliminar
             // 
-            btnEliminar.Location = new Point(122, 246);
+            btnEliminar.Location = new Point(125, 169);
             btnEliminar.Name = "btnEliminar";
             btnEliminar.Size = new Size(231, 23);
             btnEliminar.TabIndex = 5;
@@ -102,7 +93,7 @@
             // 
             // btnEstadoDeCuenta
             // 
-            btnEstadoDeCuenta.Location = new Point(245, 174);
+            btnEstadoDeCuenta.Location = new Point(248, 97);
             btnEstadoDeCuenta.Name = "btnEstadoDeCuenta";
             btnEstadoDeCuenta.Size = new Size(108, 58);
             btnEstadoDeCuenta.TabIndex = 6;
@@ -112,7 +103,7 @@
             // 
             // btnPagarCuota
             // 
-            btnPagarCuota.Location = new Point(122, 174);
+            btnPagarCuota.Location = new Point(125, 97);
             btnPagarCuota.Name = "btnPagarCuota";
             btnPagarCuota.Size = new Size(108, 58);
             btnPagarCuota.TabIndex = 7;
@@ -122,7 +113,7 @@
             // 
             // btnLeerBaaseDeDatosSQL
             // 
-            btnLeerBaaseDeDatosSQL.Location = new Point(122, 316);
+            btnLeerBaaseDeDatosSQL.Location = new Point(125, 239);
             btnLeerBaaseDeDatosSQL.Name = "btnLeerBaaseDeDatosSQL";
             btnLeerBaaseDeDatosSQL.Size = new Size(231, 35);
             btnLeerBaaseDeDatosSQL.TabIndex = 8;
@@ -134,7 +125,7 @@
             // 
             lstPersonas.FormattingEnabled = true;
             lstPersonas.ItemHeight = 15;
-            lstPersonas.Location = new Point(359, 89);
+            lstPersonas.Location = new Point(362, 12);
             lstPersonas.Name = "lstPersonas";
             lstPersonas.Size = new Size(565, 259);
             lstPersonas.TabIndex = 9;
@@ -143,7 +134,7 @@
             // lblCargando
             // 
             lblCargando.AutoSize = true;
-            lblCargando.Location = new Point(170, 364);
+            lblCargando.Location = new Point(173, 287);
             lblCargando.Name = "lblCargando";
             lblCargando.Size = new Size(38, 15);
             lblCargando.TabIndex = 10;
@@ -153,7 +144,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(936, 450);
+            ClientSize = new Size(936, 333);
             Controls.Add(lblCargando);
             Controls.Add(lstPersonas);
             Controls.Add(btnLeerBaaseDeDatosSQL);
@@ -164,7 +155,6 @@
             Controls.Add(btnModificar);
             Controls.Add(btnCargar);
             Controls.Add(pictureBox2);
-            Controls.Add(pictureBox1);
             Icon = (Icon)resources.GetObject("$this.Icon");
             KeyPreview = true;
             MaximizeBox = false;
@@ -173,15 +163,12 @@
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Chronos Crossfit";
             Load += frmInicio_Load;
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-
-        private PictureBox pictureBox1;
         private PictureBox pictureBox2;
         private Button btnCargar;
         private Button btnModificar;

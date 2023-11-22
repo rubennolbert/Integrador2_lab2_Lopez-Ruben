@@ -73,8 +73,8 @@ namespace Formularios
         {
             this.Close();
         }
-        
-        
+
+
         private bool ValidarCampos()
         {
             if (this.txtImporte.Text == string.Empty)
@@ -92,6 +92,6 @@ namespace Formularios
             return true;
         }
 
-        
+
     }
 }
