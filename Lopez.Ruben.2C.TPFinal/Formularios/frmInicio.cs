@@ -56,7 +56,7 @@ namespace Formularios
         {
             frmCargaAtleta frmCarga = new frmCargaAtleta(this.Box);
             frmCarga.ShowDialog();
-            this.ActualizaListaSocios();
+            this.ActualizaListaAtletas();
         }
 
         /// <summary>
@@ -99,7 +99,7 @@ namespace Formularios
                 atleta = (Atleta)this.lstPersonas.SelectedItem;
                 frmModificarAtleta frm = new frmModificarAtleta(this.Box, atleta);
                 frm.ShowDialog();
-                this.ActualizaListaSocios();
+                this.ActualizaListaAtletas();
             }
             else
             {
@@ -125,7 +125,7 @@ namespace Formularios
                         atleta = (Atleta)this.lstPersonas.SelectedItem;
                         MessageBox.Show(this.Box.ElimiarAtleta(atleta), "Eliminar atleta", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         GestorSQL.EliminarAtleta(atleta.Dni);
-                        this.ActualizaListaSocios();
+                        this.ActualizaListaAtletas();
                     }
                     else
                     {
@@ -232,7 +232,7 @@ namespace Formularios
         /// <summary>
         /// Actualiza la listbox con los datos de la lista de atletas del box
         /// </summary>
-        private void ActualizaListaSocios()
+        private void ActualizaListaAtletas()
         {
             try
             {
@@ -302,7 +302,7 @@ namespace Formularios
             }
             else
             {
-                this.ActualizaListaSocios();
+                this.ActualizaListaAtletas();
                 this.lblCargando.ForeColor = Color.Green;
                 this.lblCargando.Text = "Base de datos cargada";
             }

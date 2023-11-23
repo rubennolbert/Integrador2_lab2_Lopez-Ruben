@@ -23,7 +23,7 @@ namespace Entidades.Archivos_Serializacion
         /// <param name="nombreArchivo"></param>
         /// <param name="elemento"></param>
         /// <exception cref="ArchivoInvalidoException"></exception>
-        public void Escribir(string nombreArchivo, T elemento)
+        public void Escribir(string nombreArchivo, T elemento) //recibe obj generics
         {
             try
             {

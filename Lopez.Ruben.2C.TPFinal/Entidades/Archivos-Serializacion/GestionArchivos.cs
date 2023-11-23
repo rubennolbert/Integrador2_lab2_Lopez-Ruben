@@ -19,7 +19,7 @@ namespace Entidades.Archivos_Serializacion
             DirectoryInfo path;
             if(tipo == ETipo.TXT)
             {
-                path = Directory.CreateDirectory($"{Environment.CurrentDirectory}\\EstadosDeCuenta\\"); //se crea un cirectorio
+                path = Directory.CreateDirectory($"{Environment.CurrentDirectory}\\EstadosDeCuenta\\"); //se crea un directorio
             }
             else
             {
