@@ -24,6 +24,12 @@ namespace Formularios
             this.atleta = atleta;
         }
 
+        /// <summary>
+        /// Carga los datos del atleta en los campos, cargo la lista de cuotas del atleta al listbox y llamando a la funcion VerificarSiEstaAlDia()
+        /// verifico si esta al dia con las cuotas y cambio el texto y el color del label lblEstaAlDia
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void frmEstadoDeCuenta_Load(object sender, EventArgs e)
         {
             try
@@ -56,6 +62,12 @@ namespace Formularios
             }
         }
 
+        /// <summary>
+        /// Genera un documento de texto con los datos del atleta, su historial de pago y si esta al dia con las cuotas o si debe el úlitmo mes.
+        /// Se abre el documento generado y se informa donde esta guardado. Si hay algun problema se arroja la exception correspondiente.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnImprimir_Click(object sender, EventArgs e)
         {
             try

@@ -22,6 +22,13 @@ namespace Formularios
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Al cargar el formulario se busca si ya existe un archivo xml con datos de socios existentes, si lo encuentra se lee
+        /// y se crea un box con esa lista de socios encontrada. Si no hay archivo de datos se crea un box de cero.
+        /// Se actualiza la vista de la listbox.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void frmInicio_Load(object sender, EventArgs e)
         {
 
@@ -39,7 +46,12 @@ namespace Formularios
         }
 
 
-
+        /// <summary>
+        /// Instancia un formulario de carga de atletas enviandole el box creado en este formulario principal,
+        /// y al volver actualiza la vista de la lista de atletas por si se agregó uno nuevo
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnCargar_Click(object sender, EventArgs e)
         {
             frmCargaAtleta frmCarga = new frmCargaAtleta(this.Box);
@@ -47,7 +59,11 @@ namespace Formularios
             this.ActualizaListaSocios();
         }
 
-
+        /// <summary>
+        /// Checkea si la listabox quedó vacía y en ese caso inahbilita los botones de interaccion con atletas ya que no hay ninguno para interactuar
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void lstPersonas_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (this.lstPersonas.SelectedIndex == -1)
@@ -69,6 +85,12 @@ namespace Formularios
             }
         }
 
+        /// <summary>
+        /// Si hay algun atleta seleccionado en la lista, instancia un formulario para modificar los datos del atleta seleccionado y al 
+        /// regresar actualiza la lista de atletas en caso que se haya realizado alguna modificación.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnModificar_Click(object sender, EventArgs e)
         {
             Atleta atleta;
@@ -85,6 +107,12 @@ namespace Formularios
             }
         }
 
+        /// <summary>
+        /// Si hay algun atleta seleccionado en la lista es eliminado de la lista de atletas del box previa confirmación,
+        /// y actualiza la lista de atletas en caso que se haya confirmado la eliminación.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             Atleta atleta;
@@ -114,6 +142,11 @@ namespace Formularios
             }
         }
 
+        /// <summary>
+        /// Si hay algun atleta seleccionado se instancia un formulario para agregar una cuota a la lista de cuotas del atleta.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnPagarCuota_Click(object sender, EventArgs e)
         {
             Atleta atleta;
@@ -125,6 +158,12 @@ namespace Formularios
             }
         }
 
+        /// <summary>
+        /// Si hay algun atleta seleccionado se instancia un formulario para ver el estado de cuenta del mismo, si esta
+        /// al día con las cuotas
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnEstadoDeCuenta_Click(object sender, EventArgs e)
         {
             Atleta atleta;
@@ -136,6 +175,12 @@ namespace Formularios
             }
         }
 
+        /// <summary>
+        /// Exporta los datos de la lista de atletas a un archivo "dataAtletas.xml" en una carpeta llamada XML en el escritorio.
+        /// Si el archivo ya existe lo sobreescribe
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnExportar_Click(object sender, EventArgs e)
         {
             try
@@ -154,7 +199,11 @@ namespace Formularios
             }
         }
 
-
+        /// <summary>
+        /// Pide confirmación para cerrar el programa y avisa si quiere guardar los datos de la lista de atletas.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void frmInicio_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (MessageBox.Show("Esta seguro que desea salir?\nExporte la los datos de la lista antes de salir.", "Salir", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == DialogResult.Yes)
@@ -166,6 +215,11 @@ namespace Formularios
             }
         }
 
+        /// <summary>
+        /// En un hilo paralelo lee la base de datos, trae la lista de atletas y la carga en el listbox.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnLeerBaseDeDatosSQL_Click(object sender, EventArgs e)
         {
             this.InformeCargando += CargandoBase;
@@ -175,7 +229,9 @@ namespace Formularios
         }
 
 
-
+        /// <summary>
+        /// Actualiza la listbox con los datos de la lista de atletas del box
+        /// </summary>
         private void ActualizaListaSocios()
         {
             try
@@ -196,6 +252,10 @@ namespace Formularios
 
         }
 
+        /// <summary>
+        /// Metodo que invoca a los metodos que muestran el estado de la carga de la base de datos y del método
+        /// que informa cuando la base de datos ya fue cargada
+        /// </summary>
         public void IniciarCarga()
         {
             int contador = 5000;
@@ -214,6 +274,10 @@ namespace Formularios
             }
         }
 
+        /// <summary>
+        /// Informa el estado de la carga de la base de datos.
+        /// </summary>
+        /// <param name="tiempo"></param>
         private void CargandoBase(int tiempo)
         {
             if (this.InvokeRequired)
@@ -227,6 +291,9 @@ namespace Formularios
             }
         }
 
+        /// <summary>
+        /// Informa cuando la base de datos ya fue cargada.
+        /// </summary>
         private void FinDeCargaBase()
         {
             if (this.InvokeRequired)

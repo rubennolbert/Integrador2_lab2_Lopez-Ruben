@@ -16,7 +16,7 @@ namespace Entidades.Modelos
         private DateTime fechaDeCuota;
         private string mesCuota;
         private string anioCuota;
-        private int dniAtleta;                // VA A SER MI FK EN LA BASE DE DATOS ****borrar esto****}
+        private int dniAtleta;                // VA A SER MI FK EN LA BASE DE DATOS 
 
 
         public Cuota() { }

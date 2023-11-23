@@ -13,12 +13,13 @@ namespace Entidades.Archivos_Serializacion
         protected string? pathBase;
         protected ETipo tipo;
 
-        protected GestionArchivos(ETipo tipo)
+
+        protected GestionArchivos(ETipo tipo) //constructor
         {
             DirectoryInfo path;
             if(tipo == ETipo.TXT)
             {
-                path = Directory.CreateDirectory($"{Environment.CurrentDirectory}\\EstadosDeCuenta\\");
+                path = Directory.CreateDirectory($"{Environment.CurrentDirectory}\\EstadosDeCuenta\\"); //se crea un cirectorio
             }
             else
             {

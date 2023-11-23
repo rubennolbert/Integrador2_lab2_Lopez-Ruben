@@ -25,6 +25,11 @@ namespace Formularios
             this.atleta = atleta;
         }
 
+        /// <summary>
+        /// Carga en los textbox correspondientes los datos del atleta recibido como parametro en la instancia del form
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void frmModificarAtleta_Load(object sender, EventArgs e)
         {
             this.txtNombre.Text = atleta.Nombre;
@@ -36,6 +41,11 @@ namespace Formularios
             this.cbmEnum1.SelectedItem = atleta.Pase;
         }
 
+        /// <summary>
+        /// Valida los campos y si estan OK modifica los datos del atleta, si algun campo no esta ok, tira exception.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnAceptar_Click(object sender, EventArgs e)
         {
             try
@@ -73,12 +83,23 @@ namespace Formularios
             }
         }
 
+        /// <summary>
+        /// Cancela la instancia del formulario de modificar cerrandolo y volviendo al form principal
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             this.Close();
 
         }
 
+        /// <summary>
+        /// Verifica que los campos no esten vacios, arroja exceptions en caso de no validar.
+        /// </summary>
+        /// <returns></returns>
+        /// <exception cref="CampoVacioException"></exception>
+        /// <exception cref="FechaNacimientoInvalidaException"></exception>
         private bool ValidarCampos()
         {
             if (this.txtNombre.Text == string.Empty || this.txtApellido.Text == string.Empty)

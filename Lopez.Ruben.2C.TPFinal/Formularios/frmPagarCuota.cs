@@ -24,6 +24,11 @@ namespace Formularios
             this.atleta = atleta;
         }
 
+        /// <summary>
+        /// Carga los datos del atleta que vino como parámetro en la instancia del form
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void frmPagarCuota_Load(object sender, EventArgs e)
         {
             this.txtNombre.Text = atleta.Nombre;
@@ -33,6 +38,13 @@ namespace Formularios
             this.cmbMetodoDePago.DataSource = Enum.GetValues(typeof(Cuota.EMetodoDePago));
         }
 
+        /// <summary>
+        /// Valida los campos, si estan ok genero una nueva cuota con los datos ingresados y con el metodo RegistrarPago() de atleta
+        /// agrego esta cuota a la lista de cuotas del atleta, si esta todo ok se cierra el form y se vuelve al principal.
+        /// Si algo salió mal se arrojara la exception que corresponda.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnAceptar_Click(object sender, EventArgs e)
         {
             try
@@ -69,12 +81,22 @@ namespace Formularios
             }
         }
 
+        /// <summary>
+        /// Cancela la instancia del formulario de modificar cerrandolo y volviendo al form principal
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-
+        /// <summary>
+        /// Verifica que el importe sea un numero positivo, en caso contrario arrojará las exceptions correspondientes
+        /// </summary>
+        /// <returns></returns>
+        /// <exception cref="CampoVacioException"></exception>
+        /// <exception cref="ImporteInvalidoException"></exception>
         private bool ValidarCampos()
         {
             if (this.txtImporte.Text == string.Empty)

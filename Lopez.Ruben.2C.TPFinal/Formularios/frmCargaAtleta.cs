@@ -18,17 +18,30 @@ namespace Formularios
     {
         private BoxCrossfit box;
 
+
         public frmCargaAtleta(BoxCrossfit box)
         {
             InitializeComponent();
             this.box = box;
         }
 
+        /// <summary>
+        /// al cargar el formulario cargo las opciones de los combo box con los datos de los anidados de atleta
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void frmCargaAtleta_Load(object sender, EventArgs e)
         {
             this.cbmEnum1.DataSource = Enum.GetValues(typeof(Atleta.EPase));
         }
 
+        /// <summary>
+        /// Valida los campos y en especial el dni, si esta todo ok, se crea un atleta con estos datos y se agrega al box que recibió
+        /// como parametro al ser instanciado el formulario.
+        /// Fallas en la validacion de los datos arrojaran las excepciones que correspondan.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnAceptar_Click(object sender, EventArgs e)
         {
             try
@@ -74,12 +87,25 @@ namespace Formularios
             }
         }
 
-
+        /// <summary>
+        /// Cancela la instancia del formulario de carga cerrandolo y volviendo al form principal
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
+
+        /// <summary>
+        /// Verifica que los campos no esten vacios y que el dni sea un numero valido, arroja exceptions en caso de no validar.
+        /// </summary>
+        /// <returns></returns>
+        /// <exception cref="CampoVacioException"></exception>
+        /// <exception cref="DniInvalidoException"></exception>
+        /// <exception cref="CantidadDeDigitosException"></exception>
+        /// <exception cref="FechaNacimientoInvalidaException"></exception>
         private bool ValidarCampos()
         {
             if (this.txtNombre.Text == string.Empty || this.txtApellido.Text == string.Empty || this.txtDni.Text == string.Empty)
@@ -105,6 +131,13 @@ namespace Formularios
             return true;
         }
 
+        /// <summary>
+        /// Recibe un entero y verifica si algun atleta de la lista de atletas del box tiene el mismo numero de dni, si ya existe el dni en
+        /// cuestión, arroja un exception
+        /// </summary>
+        /// <param name="dni"></param>
+        /// <returns></returns>
+        /// <exception cref="DniInvalidoException"></exception>
         private bool ValidarDniExistente(int dni)
         {
             foreach (Atleta atleta in this.box.ListaAtletas)
@@ -117,7 +150,14 @@ namespace Formularios
             return true;
         }
 
-
+        /// <summary>
+        /// Recibe un box y un atleta como parametros e intenta agregar el atleta a la lista de atletas del box, si no se puede
+        /// arroja una exception
+        /// </summary>
+        /// <param name="box"></param>
+        /// <param name="atleta"></param>
+        /// <returns></returns>
+        /// <exception cref="IngresoAlClubException"></exception>
         private bool IngresarSocio(BoxCrossfit box, Atleta atleta)
         {
             if (!(this.box != atleta && box + atleta))

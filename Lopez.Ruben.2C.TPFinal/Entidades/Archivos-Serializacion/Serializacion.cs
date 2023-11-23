@@ -15,7 +15,14 @@ namespace Entidades.Archivos_Serializacion
     {
         public Serializacion(ETipo tipo) : base(tipo) { }
 
-
+        /// <summary>
+        /// Recibe un objeto generico y utilizando un XmlTextWriter escribe un archivo xml en la ruta que tiene definida en
+        /// la clase madre y con el nombre que recibe como string.
+        /// Si el nombre del archivo no tiene la extension .xml arroja una exception.         
+        /// </summary>
+        /// <param name="nombreArchivo"></param>
+        /// <param name="elemento"></param>
+        /// <exception cref="ArchivoInvalidoException"></exception>
         public void Escribir(string nombreArchivo, T elemento)
         {
             try
@@ -40,7 +47,13 @@ namespace Entidades.Archivos_Serializacion
             }
         }
 
-
+        /// <summary>
+        /// Recibe un nombre de archivo y utilizando XmlTextReader intenta leerlo y convertirlo a un objeto.
+        /// Si el nombre del archivo no tiene la extension .xml arroja una exception.
+        /// </summary>
+        /// <param name="nombreArchivo"></param>
+        /// <returns></returns>
+        /// <exception cref="ArchivoInvalidoException"></exception>
         public T Leer(string nombreArchivo)
         {
             try
@@ -64,6 +77,10 @@ namespace Entidades.Archivos_Serializacion
             }
         }
 
+        /// <summary>
+        /// Retorna en un string la ruta donde se guardan los archivos
+        /// </summary>
+        /// <returns></returns>
         public string RutaDeEscritura()
         {
             return $"{pathBase}";

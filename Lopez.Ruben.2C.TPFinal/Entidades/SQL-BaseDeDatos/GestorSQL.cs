@@ -17,7 +17,12 @@ namespace Entidades.SQL_BaseDeDatos
         {
             GestorSQL.cadenaConexion = "Server = . ; Database = ATLETAS_TEST_DB ;Trusted_Connection = True";
         }
-        
+
+        /// <summary>
+        /// Metodo para leer la lista de atletas de la base SQL, la devuelve en una lista de atletas
+        /// </summary>
+        /// <returns></returns>
+        /// <exception cref="ExceptionSQL"></exception>
         public static List<Atleta> LeerDatosAtleta()
         {
             List<Atleta> listaAtletas = new List<Atleta>();
@@ -50,7 +55,10 @@ namespace Entidades.SQL_BaseDeDatos
             }
         }
 
-
+        /// <summary>
+        /// Usando los metodos para traer atletas y cuotas de la base de datos, los carga en un box
+        /// </summary>
+        /// <param name="Box"></param>
         public static void LeerDatosBoxCrossfit(BoxCrossfit Box)
         {
             Box.ListaAtletas = LeerDatosAtleta();
@@ -60,6 +68,11 @@ namespace Entidades.SQL_BaseDeDatos
             }
         }
 
+        /// <summary>
+        /// Carga un atleta en la tabla atletas de la base de datos
+        /// </summary>
+        /// <param name="a"></param>
+        /// <exception cref="ExceptionSQL"></exception>
         public static void AltaAtleta(Atleta a)
         {
             string query = "insert into atletas (nombre, apellido, dni, fecha_nacimiento, pase) values (@nombre, @apellido, @dni, @fecha_nacimiento, @pase)";
@@ -80,7 +93,7 @@ namespace Entidades.SQL_BaseDeDatos
             {
                 throw new ExceptionSQL("Error al dar de alta en la base de datos", ex);
             }
-            finally            ///revisar esto
+            finally        //siempre    
             {
                 if (connection != null && connection.State == System.Data.ConnectionState.Open)
                 {
@@ -89,6 +102,12 @@ namespace Entidades.SQL_BaseDeDatos
             }
         }
 
+        /// <summary>
+        /// Actualiza los datos de un atleta en la base de datos, el atleta es identificado por su dni 
+        /// </summary>
+        /// <param name="a"></param>
+        /// <param name="dni"></param>
+        /// <exception cref="ExceptionSQL"></exception>
         public static void ModificarAtleta(Atleta a, int dni)
         {
             string query = "update atletas set nombre = @nombre, apellido = @apellido, fecha_nacimiento = @fecha_nacimiento, passe = @pase where dni = @dni";
@@ -112,6 +131,11 @@ namespace Entidades.SQL_BaseDeDatos
             }
         }
 
+        /// <summary>
+        /// Elimina un atleta de la base de datos
+        /// </summary>
+        /// <param name="dni"></param>
+        /// <exception cref="ExceptionSQL"></exception>
         public static void EliminarAtleta(int dni)
         {
             string query = "delete from atletas where dni = @dni";
@@ -131,6 +155,12 @@ namespace Entidades.SQL_BaseDeDatos
             }
         }
 
+        /// <summary>
+        /// Agrega una cuota en la tabla de cuotas de la base
+        /// </summary>
+        /// <param name="a"></param>
+        /// <param name="c"></param>
+        /// <exception cref="ExceptionSQL"></exception>
         public static void AltaCuota(Atleta a, Cuota c)
         {
             string query = "insert into cuotas (metodo_de_pago, pase, importe, fecha_cuota, dni) values (@metodo_de_pago, @pase, @importe, @fecha_cuota, @dni)";
@@ -160,7 +190,12 @@ namespace Entidades.SQL_BaseDeDatos
             }
         }
 
-
+        /// <summary>
+        /// Trae de la base las cuotas de un atleta determinado
+        /// </summary>
+        /// <param name="atleta"></param>
+        /// <returns></returns>
+        /// <exception cref="ExceptionSQL"></exception>
         public static List<Cuota> LeerCuotasDeAtleta(Atleta atleta)
         {
             List<Cuota> listaDeCuotas = new List<Cuota>();
