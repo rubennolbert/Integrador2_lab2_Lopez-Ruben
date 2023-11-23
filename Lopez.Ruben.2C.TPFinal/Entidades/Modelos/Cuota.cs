@@ -27,7 +27,7 @@ namespace Entidades.Modelos
             this.pase = pase;
             this.fechaDeCuota = fechaDeCuota;
             this.mesCuota = ConvertirStringCuotaMes(fechaDeCuota);
-            this.anioCuota = ConvertirStringCuotaAnio(FechaDeCuota);
+            this.anioCuota = ConvertirStringCuotaAnio(fechaDeCuota);
             this.dniAtleta = dniAtleta;
         }
 
@@ -42,13 +42,15 @@ namespace Entidades.Modelos
 
         private string ConvertirStringCuotaMes(DateTime fechaCuota)
         {
-            string cuotaMes = FechaDeCuota.ToString("MM");
+            string cuotaMes = string.Empty;
+            cuotaMes = FechaDeCuota.ToString("MM");
             return cuotaMes;
         }
 
         private string ConvertirStringCuotaAnio(DateTime fechaCuota)
         {
-            string cuotaAnio = FechaDeCuota.ToString("YYYY");
+            string cuotaAnio = string.Empty;
+            cuotaAnio = FechaDeCuota.ToString("yyyy");
             return cuotaAnio;
         }
         

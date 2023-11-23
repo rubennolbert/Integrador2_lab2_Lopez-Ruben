@@ -36,7 +36,7 @@
             btnEliminar = new Button();
             btnEstadoDeCuenta = new Button();
             btnPagarCuota = new Button();
-            btnLeerBaaseDeDatosSQL = new Button();
+            btnLeerBaseDeDatosSQL = new Button();
             lstPersonas = new ListBox();
             lblCargando = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
@@ -45,7 +45,7 @@
             // pictureBox2
             // 
             pictureBox2.Image = Properties.Resources.Logotipo_de_fitness_y_crossfit_healty_care___Vector_Premium___Opera_22_11_2023_19_36_56;
-            pictureBox2.Location = new Point(8, 9);
+            pictureBox2.Location = new Point(24, 31);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(111, 262);
             pictureBox2.TabIndex = 1;
@@ -53,7 +53,7 @@
             // 
             // btnCargar
             // 
-            btnCargar.Location = new Point(125, 12);
+            btnCargar.Location = new Point(141, 34);
             btnCargar.Name = "btnCargar";
             btnCargar.Size = new Size(231, 37);
             btnCargar.TabIndex = 2;
@@ -63,7 +63,7 @@
             // 
             // btnModificar
             // 
-            btnModificar.Location = new Point(125, 55);
+            btnModificar.Location = new Point(141, 77);
             btnModificar.Name = "btnModificar";
             btnModificar.Size = new Size(231, 36);
             btnModificar.TabIndex = 3;
@@ -73,7 +73,7 @@
             // 
             // btnExportar
             // 
-            btnExportar.Location = new Point(125, 198);
+            btnExportar.Location = new Point(141, 220);
             btnExportar.Name = "btnExportar";
             btnExportar.Size = new Size(231, 35);
             btnExportar.TabIndex = 4;
@@ -83,7 +83,7 @@
             // 
             // btnEliminar
             // 
-            btnEliminar.Location = new Point(125, 169);
+            btnEliminar.Location = new Point(141, 191);
             btnEliminar.Name = "btnEliminar";
             btnEliminar.Size = new Size(231, 23);
             btnEliminar.TabIndex = 5;
@@ -93,7 +93,7 @@
             // 
             // btnEstadoDeCuenta
             // 
-            btnEstadoDeCuenta.Location = new Point(248, 97);
+            btnEstadoDeCuenta.Location = new Point(264, 119);
             btnEstadoDeCuenta.Name = "btnEstadoDeCuenta";
             btnEstadoDeCuenta.Size = new Size(108, 58);
             btnEstadoDeCuenta.TabIndex = 6;
@@ -103,7 +103,7 @@
             // 
             // btnPagarCuota
             // 
-            btnPagarCuota.Location = new Point(125, 97);
+            btnPagarCuota.Location = new Point(141, 119);
             btnPagarCuota.Name = "btnPagarCuota";
             btnPagarCuota.Size = new Size(108, 58);
             btnPagarCuota.TabIndex = 7;
@@ -111,21 +111,21 @@
             btnPagarCuota.UseVisualStyleBackColor = true;
             btnPagarCuota.Click += btnPagarCuota_Click;
             // 
-            // btnLeerBaaseDeDatosSQL
+            // btnLeerBaseDeDatosSQL
             // 
-            btnLeerBaaseDeDatosSQL.Location = new Point(125, 239);
-            btnLeerBaaseDeDatosSQL.Name = "btnLeerBaaseDeDatosSQL";
-            btnLeerBaaseDeDatosSQL.Size = new Size(231, 35);
-            btnLeerBaaseDeDatosSQL.TabIndex = 8;
-            btnLeerBaaseDeDatosSQL.Text = "Cargar Base de Datos (sql)";
-            btnLeerBaaseDeDatosSQL.UseVisualStyleBackColor = true;
-            btnLeerBaaseDeDatosSQL.Click += btnLeerBaaseDeDatosSQL_Click;
+            btnLeerBaseDeDatosSQL.Location = new Point(141, 261);
+            btnLeerBaseDeDatosSQL.Name = "btnLeerBaseDeDatosSQL";
+            btnLeerBaseDeDatosSQL.Size = new Size(231, 35);
+            btnLeerBaseDeDatosSQL.TabIndex = 8;
+            btnLeerBaseDeDatosSQL.Text = "Cargar Base de Datos (sql)";
+            btnLeerBaseDeDatosSQL.UseVisualStyleBackColor = true;
+            btnLeerBaseDeDatosSQL.Click += btnLeerBaseDeDatosSQL_Click;
             // 
             // lstPersonas
             // 
             lstPersonas.FormattingEnabled = true;
             lstPersonas.ItemHeight = 15;
-            lstPersonas.Location = new Point(362, 12);
+            lstPersonas.Location = new Point(378, 34);
             lstPersonas.Name = "lstPersonas";
             lstPersonas.Size = new Size(565, 259);
             lstPersonas.TabIndex = 9;
@@ -134,7 +134,7 @@
             // lblCargando
             // 
             lblCargando.AutoSize = true;
-            lblCargando.Location = new Point(173, 287);
+            lblCargando.Location = new Point(189, 309);
             lblCargando.Name = "lblCargando";
             lblCargando.Size = new Size(38, 15);
             lblCargando.TabIndex = 10;
@@ -144,10 +144,10 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(936, 333);
+            ClientSize = new Size(964, 346);
             Controls.Add(lblCargando);
             Controls.Add(lstPersonas);
-            Controls.Add(btnLeerBaaseDeDatosSQL);
+            Controls.Add(btnLeerBaseDeDatosSQL);
             Controls.Add(btnPagarCuota);
             Controls.Add(btnEstadoDeCuenta);
             Controls.Add(btnEliminar);
@@ -155,6 +155,7 @@
             Controls.Add(btnModificar);
             Controls.Add(btnCargar);
             Controls.Add(pictureBox2);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Icon = (Icon)resources.GetObject("$this.Icon");
             KeyPreview = true;
             MaximizeBox = false;
@@ -176,7 +177,7 @@
         private Button btnEliminar;
         private Button btnEstadoDeCuenta;
         private Button btnPagarCuota;
-        private Button btnLeerBaaseDeDatosSQL;
+        private Button btnLeerBaseDeDatosSQL;
         private ListBox lstPersonas;
         private Label lblCargando;
     }

@@ -43,9 +43,9 @@ namespace Formularios
                 int importe = int.Parse(this.txtImporte.Text);
                 Atleta.EPase actividad = (Atleta.EPase)this.cmbPase.SelectedItem;
                 DateTime fechaCuota = this.dtpFechaCuota.Value;
-                int dniSocio = atleta.Dni;
+                int dniAtleta = atleta.Dni;
 
-                cuota = new Cuota(metodoDePago, importe, actividad, fechaCuota, dniSocio);
+                cuota = new Cuota(metodoDePago, importe, actividad, fechaCuota, dniAtleta);
 
                 Atleta.RegistroPago(this.atleta, cuota);
                 GestorSQL.AltaCuota(this.atleta, cuota);

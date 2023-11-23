@@ -166,7 +166,7 @@ namespace Formularios
             }
         }
 
-        private void btnLeerBaaseDeDatosSQL_Click(object sender, EventArgs e)
+        private void btnLeerBaseDeDatosSQL_Click(object sender, EventArgs e)
         {
             this.InformeCargando += CargandoBase;
             this.FinDeCarga += FinDeCargaBase;
