@@ -87,7 +87,7 @@
             btnEliminar.Name = "btnEliminar";
             btnEliminar.Size = new Size(231, 23);
             btnEliminar.TabIndex = 5;
-            btnEliminar.Text = "Eliminar Menbresia";
+            btnEliminar.Text = "Eliminar Atleta";
             btnEliminar.UseVisualStyleBackColor = true;
             btnEliminar.Click += btnEliminar_Click;
             // 

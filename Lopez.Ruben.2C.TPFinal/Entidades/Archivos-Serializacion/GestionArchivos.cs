@@ -18,11 +18,11 @@ namespace Entidades.Archivos_Serializacion
             DirectoryInfo path;
             if(tipo == ETipo.TXT)
             {
-                path = Directory.CreateDirectory($"{Environment.CurrentDirectory}\\EstadosDeCuenta\\"); //probar getCurrentDirectory
+                path = Directory.CreateDirectory($"{Environment.CurrentDirectory}\\EstadosDeCuenta\\");
             }
             else
             {
-                path = Directory.CreateDirectory($"{Environment.CurrentDirectory}\\ListaSociosBackUp");
+                path = Directory.CreateDirectory($"{Environment.CurrentDirectory}\\ListaAtletasBackUp");
             }
             pathBase = path.FullName;
             this.tipo = tipo;

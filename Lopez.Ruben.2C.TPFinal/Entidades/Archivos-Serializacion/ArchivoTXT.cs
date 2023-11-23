@@ -23,7 +23,7 @@ namespace Entidades.Archivos_Serializacion
             }
             catch (Exception e)
             {
-                throw new ArchivoInvalidoExcepcion("Error en intento de escriir archivo", e);
+                throw new ArchivoInvalidoException("Error en intento de escriir archivo", e);
             }
         }
 
@@ -38,7 +38,7 @@ namespace Entidades.Archivos_Serializacion
             }
             catch (Exception e)
             {
-                throw new ArchivoInvalidoExcepcion("Error en lectura de archivo", e);
+                throw new ArchivoInvalidoException("Error en lectura de archivo", e);
             }
         }
 
