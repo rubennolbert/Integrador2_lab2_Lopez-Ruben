@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace Entidades.Excepciones
 {
-    public class IngresoAlClubException : Exception
+    public class IngresoAlBoxException : Exception
     {
-        public IngresoAlClubException(string? message) : base(message)
+        public IngresoAlBoxException(string? message) : base(message)
         {
         }
 
-        public IngresoAlClubException(string? message, Exception? innerException) : base(message, innerException)
+        public IngresoAlBoxException(string? message, Exception? innerException) : base(message, innerException)
         {
         }
     }

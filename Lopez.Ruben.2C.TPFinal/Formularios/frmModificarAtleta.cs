@@ -69,7 +69,7 @@ namespace Formularios
             {
                 MessageBox.Show(ex.Message, "Error al cargar los datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            catch (IngresoAlClubException ex)
+            catch (IngresoAlBoxException ex)
             {
                 MessageBox.Show(ex.Message, "Error al ingresar al box", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
