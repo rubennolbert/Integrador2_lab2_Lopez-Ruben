@@ -20,6 +20,7 @@ namespace Entidades.Modelos
 
 
         public Cuota() { }
+
         public Cuota(EMetodoDePago metodoDePago, int importe, Atleta.EPase pase, DateTime fechaDeCuota, int dniAtleta)
         {
             this.metodoDePago = metodoDePago;
@@ -40,6 +41,11 @@ namespace Entidades.Modelos
         public int DniAtleta { get { return dniAtleta; } set { dniAtleta = value; } }
 
 
+        /// <summary>
+        /// Extrae del atributo fechaDeCuota, que es del tipo DateTime, el mes y lo guarda como string
+        /// </summary>
+        /// <param name="fechaCuota"></param>
+        /// <returns></returns>
         private string ConvertirStringCuotaMes(DateTime fechaCuota)
         {
             string cuotaMes = string.Empty;
@@ -47,6 +53,11 @@ namespace Entidades.Modelos
             return cuotaMes;
         }
 
+        /// <summary>
+        /// Extrae del atributo fechaDeCuota, que es del tipo DateTime, el año y lo guarda como string
+        /// </summary>
+        /// <param name="fechaCuota"></param>
+        /// <returns></returns>
         private string ConvertirStringCuotaAnio(DateTime fechaCuota)
         {
             string cuotaAnio = string.Empty;
@@ -63,11 +74,22 @@ namespace Entidades.Modelos
             return false;
         }
 
+        /// <summary>
+        /// Sobrecarga del operador de igualdad dos cuotas, si las cuotas tienen iguales los atributos
+        /// mesCuota y mesAnio, devuelve true 
+        /// </summary>
+        /// <param name="c1"></param>
+        /// <param name="c2"></param>
+        /// <returns></returns>
         public static bool operator !=(Cuota c1, Cuota c2)
         {
             return !(c1 == c2);
         }
 
+        /// <summary>
+        /// Override del metodo ToString para la clase cuota para retornar los datos del objeto instanciado
+        /// </summary>
+        /// <returns></returns>
         public override string ToString()
         {
             return $"Año: {this.AnioCuota}, Mes: {this.MesCuota}, Metodo de Pago: {this.MetodoDePago}, Importe: ${this.Importe}";

@@ -31,13 +31,21 @@ namespace Entidades.Modelos
         public DateTime FechaNacimiento { get { return this.fechaNacimiento; } set { this.fechaNacimiento = value; } }
         public int Edad { get { return this.edad; } }
 
-
+        /// <summary>
+        /// Calcula la edad de la persona haciendo la diferencia de tiempo entre el dia actual y la fecha de nacimiento ingresada.
+        /// Retorna un entero que representa la edad en años
+        /// </summary>
+        /// <returns></returns>
         private int CalcularEdad()
         {
             TimeSpan edad = DateTime.Now - this.fechaNacimiento;
             return (int)(edad.TotalDays / 365.25);
         }
 
+        /// <summary>
+        /// Override del metodo ToString para la clase persona para retornar los datos del objeto instanciado
+        /// </summary>
+        /// <returns></returns>
         public override string ToString()
         {
             Thread.CurrentThread.CurrentCulture = new System.Globalization.CultureInfo("en-AR");//probar
@@ -50,6 +58,10 @@ namespace Entidades.Modelos
             return sb.ToString();           
         }
 
+        /// <summary>
+        /// Devuelve en un string los datos de la persona instanciada de un dato por linea
+        /// </summary>
+        /// <returns></returns>
         public virtual string Imprimir()
         {
             StringBuilder sb = new StringBuilder();
@@ -61,6 +73,12 @@ namespace Entidades.Modelos
             return sb.ToString();
         }
 
+        /// <summary>
+        /// Sobrecarga del operador de igualdad entre dos personas, si tienen el mismo dni son la misma persona y retorna true
+        /// </summary>
+        /// <param name="p1"></param>
+        /// <param name="p2"></param>
+        /// <returns></returns>
         public static bool operator == (Persona p1, Persona p2)
         {
             return (p1.dni == p2.dni);

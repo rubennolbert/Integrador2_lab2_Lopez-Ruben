@@ -27,7 +27,13 @@ namespace Entidades.Modelos
         }
 
 
-
+        /// <summary>
+        /// Sobrecarga del operador de igualdad entre un box y un atleta, si el box tiene ese atleta en la lista de atletas que
+        /// tiene como atributo, devuelve true, si el aleta no se encuentra devuelve false
+        /// </summary>
+        /// <param name="B"></param>
+        /// <param name="A"></param>
+        /// <returns></returns>
         public static bool operator == (BoxCrossfit B, Atleta A)
         {
             if(B is not null && A is  not null)
@@ -47,6 +53,14 @@ namespace Entidades.Modelos
             return !(B == A);
         }
 
+        /// <summary>
+        /// Sobrecarga del operador suma entre un box y un atleta, si se quiere agregar un atleta a la lista de atletas del box y en
+        /// ella se encuentra otro atleta con el mismo dni (utilizando la sobrecarga del operador == de persona) retorna false, 
+        /// si no, retorna true y agrega el atleta a la lista del box  
+        /// </summary>
+        /// <param name="B"></param>
+        /// <param name="A"></param>
+        /// <returns></returns>
         public static bool operator + (BoxCrossfit B, Atleta A)
         {
             if(B is not null && A is not null && B != A)
@@ -57,6 +71,13 @@ namespace Entidades.Modelos
             return false;
         }
 
+        /// <summary>
+        /// obrecarga del operador resta entre un box y un atleta, si se quiere remover un atleta de la lista de atletas del box y en ella no se encuentra dicho atleta, retorna false,
+        /// en cambio si el atleta si esta en la lista, es removido y retorna true
+        /// </summary>
+        /// <param name="B"></param>
+        /// <param name="A"></param>
+        /// <returns></returns>
         public static bool operator - (BoxCrossfit B, Atleta A)
         {
             if(A is not null && B is not null && B == A)
@@ -67,6 +88,13 @@ namespace Entidades.Modelos
             return false;
         }
 
+        /// <summary>
+        /// Utilizando la sobrecarga del operador resta entre un box y un atleta,
+        /// remueve el atleta que recibe como parametro de la lista del box
+        /// y retorna un mensaje en un string avisando si lo pudo remover o no
+        /// </summary>
+        /// <param name="A"></param>
+        /// <returns></returns>
         public string ElimiarAtleta(Atleta A)
         {
             if(this - A)
@@ -76,7 +104,11 @@ namespace Entidades.Modelos
             return "No se encuentra en lista.";
         }
 
-        public string ImprirListaDeAtletas()
+        /// <summary>
+        /// Retorna en un string los datos de los atletas que se encuentren en la lista de atletas del box
+        /// </summary>
+        /// <returns></returns>
+        public string ImprimirListaDeAtletas()
         {
             StringBuilder sb = new StringBuilder();
             

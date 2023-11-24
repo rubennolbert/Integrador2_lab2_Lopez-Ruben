@@ -13,7 +13,7 @@
         <Pase>UnaClase</Pase>
         <FechaDeCuota>2022-05-01T00:00:00</FechaDeCuota>
         <MesCuota>05</MesCuota>
-        <AnioCuota>YYYY</AnioCuota>
+        <AnioCuota>2022</AnioCuota>
         <DniAtleta>10077647</DniAtleta>
       </Cuota>
     </HistorialDePagos>
@@ -31,7 +31,7 @@
         <Pase>Libre</Pase>
         <FechaDeCuota>2023-11-22T00:00:00</FechaDeCuota>
         <MesCuota>11</MesCuota>
-        <AnioCuota>YYYY</AnioCuota>
+        <AnioCuota>2023</AnioCuota>
         <DniAtleta>12312312</DniAtleta>
       </Cuota>
       <Cuota>
@@ -40,7 +40,7 @@
         <Pase>Libre</Pase>
         <FechaDeCuota>2023-10-01T00:00:00</FechaDeCuota>
         <MesCuota>10</MesCuota>
-        <AnioCuota>YYYY</AnioCuota>
+        <AnioCuota>2023</AnioCuota>
         <DniAtleta>12312312</DniAtleta>
       </Cuota>
       <Cuota>
@@ -49,8 +49,26 @@
         <Pase>Libre</Pase>
         <FechaDeCuota>2024-01-03T00:00:00</FechaDeCuota>
         <MesCuota>01</MesCuota>
-        <AnioCuota>YYYY</AnioCuota>
+        <AnioCuota>2024</AnioCuota>
         <DniAtleta>12312312</DniAtleta>
+      </Cuota>
+    </HistorialDePagos>
+  </Atleta>
+  <Atleta>
+    <Nombre>ramon</Nombre>
+    <Apellido>carrill</Apellido>
+    <Dni>12494232</Dni>
+    <FechaNacimiento>2023-09-14T00:00:00</FechaNacimiento>
+    <Pase>Libre</Pase>
+    <HistorialDePagos>
+      <Cuota>
+        <MetodoDePago>Efectivo</MetodoDePago>
+        <Importe>14000</Importe>
+        <Pase>Libre</Pase>
+        <FechaDeCuota>2023-09-06T00:00:00</FechaDeCuota>
+        <MesCuota>09</MesCuota>
+        <AnioCuota>2023</AnioCuota>
+        <DniAtleta>12494232</DniAtleta>
       </Cuota>
     </HistorialDePagos>
   </Atleta>
@@ -67,7 +85,7 @@
         <Pase>Libre</Pase>
         <FechaDeCuota>2022-05-01T00:00:00</FechaDeCuota>
         <MesCuota>05</MesCuota>
-        <AnioCuota>YYYY</AnioCuota>
+        <AnioCuota>2022</AnioCuota>
         <DniAtleta>16675451</DniAtleta>
       </Cuota>
       <Cuota>
@@ -76,7 +94,7 @@
         <Pase>UnaClase</Pase>
         <FechaDeCuota>2022-06-01T00:00:00</FechaDeCuota>
         <MesCuota>06</MesCuota>
-        <AnioCuota>YYYY</AnioCuota>
+        <AnioCuota>2022</AnioCuota>
         <DniAtleta>16675451</DniAtleta>
       </Cuota>
       <Cuota>
@@ -85,8 +103,26 @@
         <Pase>UnaClase</Pase>
         <FechaDeCuota>2022-04-01T00:00:00</FechaDeCuota>
         <MesCuota>04</MesCuota>
-        <AnioCuota>YYYY</AnioCuota>
+        <AnioCuota>2022</AnioCuota>
         <DniAtleta>16675451</DniAtleta>
+      </Cuota>
+    </HistorialDePagos>
+  </Atleta>
+  <Atleta>
+    <Nombre>marcelo</Nombre>
+    <Apellido>lopex</Apellido>
+    <Dni>16856555</Dni>
+    <FechaNacimiento>1993-07-23T00:00:00</FechaNacimiento>
+    <Pase>Libre</Pase>
+    <HistorialDePagos>
+      <Cuota>
+        <MetodoDePago>Efectivo</MetodoDePago>
+        <Importe>14000</Importe>
+        <Pase>Libre</Pase>
+        <FechaDeCuota>2023-11-23T00:00:00</FechaDeCuota>
+        <MesCuota>11</MesCuota>
+        <AnioCuota>2023</AnioCuota>
+        <DniAtleta>16856555</DniAtleta>
       </Cuota>
     </HistorialDePagos>
   </Atleta>
@@ -103,7 +139,7 @@
         <Pase>Libre</Pase>
         <FechaDeCuota>2023-11-22T00:00:00</FechaDeCuota>
         <MesCuota>11</MesCuota>
-        <AnioCuota>YYYY</AnioCuota>
+        <AnioCuota>2023</AnioCuota>
         <DniAtleta>34786815</DniAtleta>
       </Cuota>
       <Cuota>
@@ -112,7 +148,7 @@
         <Pase>Libre</Pase>
         <FechaDeCuota>2023-10-18T00:00:00</FechaDeCuota>
         <MesCuota>10</MesCuota>
-        <AnioCuota>YYYY</AnioCuota>
+        <AnioCuota>2023</AnioCuota>
         <DniAtleta>34786815</DniAtleta>
       </Cuota>
     </HistorialDePagos>
@@ -130,7 +166,7 @@
         <Pase>Libre</Pase>
         <FechaDeCuota>2023-11-22T00:00:00</FechaDeCuota>
         <MesCuota>11</MesCuota>
-        <AnioCuota>YYYY</AnioCuota>
+        <AnioCuota>2023</AnioCuota>
         <DniAtleta>34786816</DniAtleta>
       </Cuota>
     </HistorialDePagos>
@@ -148,7 +184,7 @@
         <Pase>Libre</Pase>
         <FechaDeCuota>2023-05-01T00:00:00</FechaDeCuota>
         <MesCuota>05</MesCuota>
-        <AnioCuota>YYYY</AnioCuota>
+        <AnioCuota>2023</AnioCuota>
         <DniAtleta>38808854</DniAtleta>
       </Cuota>
       <Cuota>
@@ -157,7 +193,7 @@
         <Pase>UnaClase</Pase>
         <FechaDeCuota>2022-06-01T00:00:00</FechaDeCuota>
         <MesCuota>06</MesCuota>
-        <AnioCuota>YYYY</AnioCuota>
+        <AnioCuota>2022</AnioCuota>
         <DniAtleta>38808854</DniAtleta>
       </Cuota>
       <Cuota>
@@ -166,7 +202,7 @@
         <Pase>UnaClase</Pase>
         <FechaDeCuota>2022-04-01T00:00:00</FechaDeCuota>
         <MesCuota>04</MesCuota>
-        <AnioCuota>YYYY</AnioCuota>
+        <AnioCuota>2022</AnioCuota>
         <DniAtleta>38808854</DniAtleta>
       </Cuota>
     </HistorialDePagos>
@@ -184,7 +220,7 @@
         <Pase>Libre</Pase>
         <FechaDeCuota>2022-05-01T00:00:00</FechaDeCuota>
         <MesCuota>05</MesCuota>
-        <AnioCuota>YYYY</AnioCuota>
+        <AnioCuota>2022</AnioCuota>
         <DniAtleta>43258440</DniAtleta>
       </Cuota>
     </HistorialDePagos>
@@ -202,7 +238,7 @@
         <Pase>Libre</Pase>
         <FechaDeCuota>2022-05-01T00:00:00</FechaDeCuota>
         <MesCuota>05</MesCuota>
-        <AnioCuota>YYYY</AnioCuota>
+        <AnioCuota>2022</AnioCuota>
         <DniAtleta>43609717</DniAtleta>
       </Cuota>
     </HistorialDePagos>
@@ -220,7 +256,7 @@
         <Pase>Libre</Pase>
         <FechaDeCuota>2022-05-01T00:00:00</FechaDeCuota>
         <MesCuota>05</MesCuota>
-        <AnioCuota>YYYY</AnioCuota>
+        <AnioCuota>2022</AnioCuota>
         <DniAtleta>44266700</DniAtleta>
       </Cuota>
       <Cuota>
@@ -229,7 +265,7 @@
         <Pase>UnaClase</Pase>
         <FechaDeCuota>2022-06-01T00:00:00</FechaDeCuota>
         <MesCuota>06</MesCuota>
-        <AnioCuota>YYYY</AnioCuota>
+        <AnioCuota>2022</AnioCuota>
         <DniAtleta>44266700</DniAtleta>
       </Cuota>
       <Cuota>
@@ -238,7 +274,7 @@
         <Pase>UnaClase</Pase>
         <FechaDeCuota>2022-04-01T00:00:00</FechaDeCuota>
         <MesCuota>04</MesCuota>
-        <AnioCuota>YYYY</AnioCuota>
+        <AnioCuota>2022</AnioCuota>
         <DniAtleta>44266700</DniAtleta>
       </Cuota>
     </HistorialDePagos>
@@ -256,7 +292,7 @@
         <Pase>Libre</Pase>
         <FechaDeCuota>2022-05-01T00:00:00</FechaDeCuota>
         <MesCuota>05</MesCuota>
-        <AnioCuota>YYYY</AnioCuota>
+        <AnioCuota>2022</AnioCuota>
         <DniAtleta>45578223</DniAtleta>
       </Cuota>
     </HistorialDePagos>
@@ -274,7 +310,7 @@
         <Pase>UnaClase</Pase>
         <FechaDeCuota>2022-05-01T00:00:00</FechaDeCuota>
         <MesCuota>05</MesCuota>
-        <AnioCuota>YYYY</AnioCuota>
+        <AnioCuota>2022</AnioCuota>
         <DniAtleta>49094246</DniAtleta>
       </Cuota>
     </HistorialDePagos>
@@ -292,7 +328,7 @@
         <Pase>Libre</Pase>
         <FechaDeCuota>2022-05-01T00:00:00</FechaDeCuota>
         <MesCuota>05</MesCuota>
-        <AnioCuota>YYYY</AnioCuota>
+        <AnioCuota>2022</AnioCuota>
         <DniAtleta>52975132</DniAtleta>
       </Cuota>
     </HistorialDePagos>
@@ -310,7 +346,7 @@
         <Pase>UnaClase</Pase>
         <FechaDeCuota>2022-05-01T00:00:00</FechaDeCuota>
         <MesCuota>05</MesCuota>
-        <AnioCuota>YYYY</AnioCuota>
+        <AnioCuota>2022</AnioCuota>
         <DniAtleta>56099390</DniAtleta>
       </Cuota>
     </HistorialDePagos>
@@ -328,7 +364,7 @@
         <Pase>UnaClase</Pase>
         <FechaDeCuota>2022-05-01T00:00:00</FechaDeCuota>
         <MesCuota>05</MesCuota>
-        <AnioCuota>YYYY</AnioCuota>
+        <AnioCuota>2022</AnioCuota>
         <DniAtleta>62304520</DniAtleta>
       </Cuota>
     </HistorialDePagos>
@@ -346,7 +382,7 @@
         <Pase>UnaClase</Pase>
         <FechaDeCuota>2022-05-01T00:00:00</FechaDeCuota>
         <MesCuota>05</MesCuota>
-        <AnioCuota>YYYY</AnioCuota>
+        <AnioCuota>2022</AnioCuota>
         <DniAtleta>63629527</DniAtleta>
       </Cuota>
       <Cuota>
@@ -355,7 +391,7 @@
         <Pase>UnaClase</Pase>
         <FechaDeCuota>2022-06-01T00:00:00</FechaDeCuota>
         <MesCuota>06</MesCuota>
-        <AnioCuota>YYYY</AnioCuota>
+        <AnioCuota>2022</AnioCuota>
         <DniAtleta>63629527</DniAtleta>
       </Cuota>
       <Cuota>
@@ -364,7 +400,7 @@
         <Pase>UnaClase</Pase>
         <FechaDeCuota>2022-04-01T00:00:00</FechaDeCuota>
         <MesCuota>04</MesCuota>
-        <AnioCuota>YYYY</AnioCuota>
+        <AnioCuota>2022</AnioCuota>
         <DniAtleta>63629527</DniAtleta>
       </Cuota>
     </HistorialDePagos>
@@ -382,7 +418,7 @@
         <Pase>UnaClase</Pase>
         <FechaDeCuota>2022-05-01T00:00:00</FechaDeCuota>
         <MesCuota>05</MesCuota>
-        <AnioCuota>YYYY</AnioCuota>
+        <AnioCuota>2022</AnioCuota>
         <DniAtleta>69462045</DniAtleta>
       </Cuota>
     </HistorialDePagos>
@@ -400,7 +436,7 @@
         <Pase>UnaClase</Pase>
         <FechaDeCuota>2023-05-01T00:00:00</FechaDeCuota>
         <MesCuota>05</MesCuota>
-        <AnioCuota>YYYY</AnioCuota>
+        <AnioCuota>2023</AnioCuota>
         <DniAtleta>75727366</DniAtleta>
       </Cuota>
       <Cuota>
@@ -409,7 +445,7 @@
         <Pase>Libre</Pase>
         <FechaDeCuota>2022-06-01T00:00:00</FechaDeCuota>
         <MesCuota>06</MesCuota>
-        <AnioCuota>YYYY</AnioCuota>
+        <AnioCuota>2022</AnioCuota>
         <DniAtleta>75727366</DniAtleta>
       </Cuota>
       <Cuota>
@@ -418,7 +454,7 @@
         <Pase>Libre</Pase>
         <FechaDeCuota>2022-04-01T00:00:00</FechaDeCuota>
         <MesCuota>04</MesCuota>
-        <AnioCuota>YYYY</AnioCuota>
+        <AnioCuota>2022</AnioCuota>
         <DniAtleta>75727366</DniAtleta>
       </Cuota>
     </HistorialDePagos>
@@ -436,7 +472,7 @@
         <Pase>UnaClase</Pase>
         <FechaDeCuota>2022-05-01T00:00:00</FechaDeCuota>
         <MesCuota>05</MesCuota>
-        <AnioCuota>YYYY</AnioCuota>
+        <AnioCuota>2022</AnioCuota>
         <DniAtleta>97977736</DniAtleta>
       </Cuota>
     </HistorialDePagos>
